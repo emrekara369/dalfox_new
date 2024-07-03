@@ -48,6 +48,8 @@ github.com/gobwas/ws v1.3.2/go.mod h1:hRKAFb8wOxFROYNsT1bqfWnhX+b5MFeJM9r2ZSwg/K
 github.com/golang-jwt/jwt v3.2.0+incompatible/go.mod h1:8pz2t5EyA70fFQQSrl6XZXzqecmYZeUEB8OUGHkxJ+I=
 github.com/golang-jwt/jwt v3.2.2+incompatible h1:IfV12K8xAKAnZqdXVzCZ+TOjboZ2keLg81eXfW3O+oY=
 github.com/golang-jwt/jwt v3.2.2+incompatible/go.mod h1:8pz2t5EyA70fFQQSrl6XZXzqecmYZeUEB8OUGHkxJ+I=
+github.com/hahwul/dalfox/v2 v2.9.2 h1:R8v+erhfwSXW9KKx6PQsHfVMSoWMxqKSofTBtIrBtuw=
+github.com/hahwul/dalfox/v2 v2.9.2/go.mod h1:+Lvy66WFrdb0CCWlHfskk3aIdUM3F1/O0Ql0CRDycAw=
 github.com/hahwul/volt v1.0.5 h1:E5NtaLMpXNEPBzIqtU8sp4ndUrAUvKfM2fkfv5oWFT0=
 github.com/hahwul/volt v1.0.5/go.mod h1:DW/WJZKzf7McvXzpC2qQtokoeaohnMwfdhVK1SF8hq0=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
