@@ -1,6 +1,6 @@
 package server
 
-import "github.com/hahwul/dalfox/v2/pkg/model"
+import "github.com/emrekara369/dalfox_new/v2/pkg/model"
 
 // Req is struct of request
 type Req struct {

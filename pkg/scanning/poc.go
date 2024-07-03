@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	"github.com/hahwul/dalfox/v2/pkg/model"
+	"github.com/emrekara369/dalfox_new/v2/pkg/model"
 )
 
 // MakePoC is making poc codes
@@ -16,8 +16,8 @@ func MakePoC(poc string, req *http.Request, options model.Options) string {
 			return "HTTP RAW REQUEST\n" + string(requestDump)
 		}
 	}
-	if req != nil{
-		if req.Body != nil && req.GetBody != nil{
+	if req != nil {
+		if req.Body != nil && req.GetBody != nil {
 			body, err := req.GetBody()
 			if err == nil {
 				reqBody, err := io.ReadAll(body)

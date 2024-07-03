@@ -32,7 +32,7 @@ sudo snap install dalfox
 ## From source
 
 ```bash
-go install github.com/hahwul/dalfox/v2@latest
+go install github.com/emrekara369/dalfox_new/v2@latest
 
 # The actual release might slightly differ. This is because go install references the main branch.
 ```

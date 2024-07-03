@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/briandowns/spinner"
-	model "github.com/hahwul/dalfox/v2/pkg/model"
-	"github.com/hahwul/dalfox/v2/pkg/printing"
-	"github.com/hahwul/dalfox/v2/pkg/scanning"
+	model "github.com/emrekara369/dalfox_new/v2/pkg/model"
+	"github.com/emrekara369/dalfox_new/v2/pkg/printing"
+	"github.com/emrekara369/dalfox_new/v2/pkg/scanning"
 	voltUtils "github.com/hahwul/volt/util"
 	"github.com/spf13/cobra"
 )

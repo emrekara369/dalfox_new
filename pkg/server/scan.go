@@ -3,9 +3,9 @@ package server
 import (
 	"strings"
 
-	dalfox "github.com/hahwul/dalfox/v2/lib"
-	"github.com/hahwul/dalfox/v2/pkg/model"
-	scan "github.com/hahwul/dalfox/v2/pkg/scanning"
+	dalfox "github.com/emrekara369/dalfox_new/v2/lib"
+	"github.com/emrekara369/dalfox_new/v2/pkg/model"
+	scan "github.com/emrekara369/dalfox_new/v2/pkg/scanning"
 	vlogger "github.com/hahwul/volt/logger"
 )
 

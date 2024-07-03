@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/hahwul/dalfox/v2/pkg/model"
-	printing "github.com/hahwul/dalfox/v2/pkg/printing"
-	_ "github.com/hahwul/dalfox/v2/pkg/server/docs"
+	"github.com/emrekara369/dalfox_new/v2/pkg/model"
+	printing "github.com/emrekara369/dalfox_new/v2/pkg/printing"
+	_ "github.com/emrekara369/dalfox_new/v2/pkg/server/docs"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	echoSwagger "github.com/swaggo/echo-swagger"

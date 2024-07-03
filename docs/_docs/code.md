@@ -5,7 +5,7 @@ permalink: /docs/code/
 
 ## Get libary of dalfox
 ```
-▶ go get github.com/hahwul/dalfox/v2/lib
+▶ go get github.com/emrekara369/dalfox_new/v2/lib
 ```
 
 ## Sample of code
@@ -15,7 +15,7 @@ package main
 import (
 	"fmt"
 
-	dalfox "github.com/hahwul/dalfox/v2/lib"
+	dalfox "github.com/emrekara369/dalfox_new/v2/lib"
 )
 
 func main() {
@@ -44,9 +44,9 @@ $ go mod init <YOUR_PROJECT_REPO>
 go build 
 ```
 $ go build -o testapp
-go: finding module for package github.com/hahwul/dalfox/v2/lib
-go: downloading github.com/hahwul/dalfox/v2 v2.4.5
-go: found github.com/hahwul/dalfox/v2/lib in github.com/hahwul/dalfox/v2 v2.4.5
+go: finding module for package github.com/emrekara369/dalfox_new/v2/lib
+go: downloading github.com/emrekara369/dalfox_new/v2 v2.4.5
+go: found github.com/emrekara369/dalfox_new/v2/lib in github.com/emrekara369/dalfox_new/v2 v2.4.5
 ...
 ```
 
@@ -57,4 +57,4 @@ $ ./testapp
 ```
 
 ## More info
-[https://pkg.go.dev/github.com/hahwul/dalfox/v2/lib](https://pkg.go.dev/github.com/hahwul/dalfox/v2/lib)
+[https://pkg.go.dev/github.com/emrekara369/dalfox_new/v2/lib](https://pkg.go.dev/github.com/emrekara369/dalfox_new/v2/lib)

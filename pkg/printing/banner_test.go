@@ -3,7 +3,7 @@ package printing
 import (
 	"testing"
 
-	"github.com/hahwul/dalfox/v2/pkg/model"
+	"github.com/emrekara369/dalfox_new/v2/pkg/model"
 )
 
 func TestBanner(t *testing.T) {

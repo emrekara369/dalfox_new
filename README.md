@@ -56,7 +56,7 @@ Mode: `url` `sxss` `pipe` `file` `server` `payload`
 |               | Custom Grepping               | - Can grep with custom regular expressions on response<br />- If duplicate detection, it performs deduplication (`--grep`) |
 |               | Custom Payloads               | - Use custom payloads list file (`--custom-payload`) <br />- Custom alert value (`--custom-alert-value`) <br />- Custom alert type (`--custom-alert-type`)|
 |               | Remote Payloads               | - Use remote payloads from portswigger, payloadbox, etc.. (`--remote-payloads`)                  |
-| Package       | Package manager                | - [pkg.go.dev](https://pkg.go.dev/github.com/hahwul/dalfox/v2)<br/>- [homebrew with tap](https://github.com/hahwul/homebrew-dalfox)<br />- [snapcraft](https://snapcraft.io/dalfox)                                  |
+| Package       | Package manager                | - [pkg.go.dev](https://pkg.go.dev/github.com/emrekara369/dalfox_new/v2)<br/>- [homebrew with tap](https://github.com/hahwul/homebrew-dalfox)<br />- [snapcraft](https://snapcraft.io/dalfox)                                  |
 |               | Docker ENV                    | - [docker hub](https://hub.docker.com/repository/docker/hahwul/dalfox)<br />- [github package of docker](https://github.com/hahwul/dalfox/packages)     |
 |               | Other                         | - [github action](https://github.com/marketplace/actions/xss-scan-with-dalfox) |
 
@@ -78,7 +78,7 @@ sudo snap install dalfox
 ### From source
 
 ```bash
-go install github.com/hahwul/dalfox/v2@latest
+go install github.com/emrekara369/dalfox_new/v2@latest
 
 # The actual release might slightly differ. This is because go install references the main branch.
 ```
@@ -142,7 +142,7 @@ package main
 import (
 	"fmt"
 
-	dalfox "github.com/hahwul/dalfox/v2/lib"
+	dalfox "github.com/emrekara369/dalfox_new/v2/lib"
 )
 
 func main() {

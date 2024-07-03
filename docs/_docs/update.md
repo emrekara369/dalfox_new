@@ -16,11 +16,11 @@ sudo snap refresh dalfox
 ## Installed from go
 go1.17
 ```
-go install github.com/hahwul/dalfox/v2@latest
+go install github.com/emrekara369/dalfox_new/v2@latest
 ```
 go1.16
 ```
-GO111MODULE=on go get github.com/hahwul/dalfox/v2
+GO111MODULE=on go get github.com/emrekara369/dalfox_new/v2
 ```
 
 ## Installed from docker

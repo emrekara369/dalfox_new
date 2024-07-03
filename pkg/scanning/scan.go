@@ -13,16 +13,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hahwul/dalfox/v2/pkg/har"
+	"github.com/emrekara369/dalfox_new/v2/pkg/har"
 
 	"golang.org/x/term"
 
 	"github.com/briandowns/spinner"
-	"github.com/hahwul/dalfox/v2/pkg/model"
-	"github.com/hahwul/dalfox/v2/pkg/optimization"
-	"github.com/hahwul/dalfox/v2/pkg/printing"
-	"github.com/hahwul/dalfox/v2/pkg/report"
-	"github.com/hahwul/dalfox/v2/pkg/verification"
+	"github.com/emrekara369/dalfox_new/v2/pkg/model"
+	"github.com/emrekara369/dalfox_new/v2/pkg/optimization"
+	"github.com/emrekara369/dalfox_new/v2/pkg/printing"
+	"github.com/emrekara369/dalfox_new/v2/pkg/report"
+	"github.com/emrekara369/dalfox_new/v2/pkg/verification"
 	voltFile "github.com/hahwul/volt/file"
 )
 
