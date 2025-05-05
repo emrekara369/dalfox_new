@@ -31,6 +31,16 @@ var (
 	s          = spinner.New(spinner.CharSets[14], 100*time.Millisecond, spinner.WithWriter(os.Stderr))
 )
 
+func simplifyHeaders(header http.Header) map[string]string {
+	simple := make(map[string]string)
+	for k, v := range header {
+		if len(v) > 0 {
+			simple[k] = v[0]
+		}
+	}
+	return simple
+}
+
 // Scan is main scanning function
 func Scan(target string, options model.Options, sid string) (model.Result, error) {
 	var scanResult model.Result
@@ -699,6 +709,10 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 									PoCType:    options.PoCType,
 									MessageStr: "Triggered XSS Payload (found dialog in headless)",
 									StatusCode: 200,
+									ResponseHeaders: map[string]string{
+										"Content-Type": "text/html; charset=UTF-8",
+										"Server":       "dalfox-headless",
+									},
 								}
 									//MessageID:  -1, // we can't do HAR here because it's using chromedp}
 
@@ -786,7 +800,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 															PoCType:    options.PoCType,
 															MessageID:  har.MessageIDFromRequest(k),
 															MessageStr: "Triggered XSS Payload (found dialog in headless)",
-															StatusCode: resp.StatusCode,}
+															StatusCode: resp.StatusCode,
+															ResponseHeaders: simplifyHeaders(resp.Header),}
 														poc.Data = MakePoC(poc.Data, k, options)
 
 														if options.OutputRequest {
@@ -837,7 +852,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 															PoCType:    options.PoCType,
 															MessageID:  har.MessageIDFromRequest(k),
 															MessageStr: "Reflected Payload in JS: " + v["param"] + "=" + v["payload"],
-															StatusCode: resp.StatusCode,}
+															StatusCode: resp.StatusCode,
+															ResponseHeaders: simplifyHeaders(resp.Header),}
 														poc.Data = MakePoC(poc.Data, k, options)
 														if options.OutputRequest {
 															reqDump, err := httputil.DumpRequestOut(k, true)
@@ -874,7 +890,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 														PoCType:    options.PoCType,
 														MessageID:  har.MessageIDFromRequest(k),
 														MessageStr: "Reflected Payload in JS: " + v["param"] + "=" + v["payload"],
-														StatusCode: resp.StatusCode,}
+														StatusCode: resp.StatusCode,
+														ResponseHeaders: simplifyHeaders(resp.Header),}
 													poc.Data = MakePoC(poc.Data, k, options)
 													if options.OutputRequest {
 														reqDump, err := httputil.DumpRequestOut(k, true)
@@ -928,7 +945,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 												PoCType:    options.PoCType,
 												MessageID:  har.MessageIDFromRequest(k),
 												MessageStr: "Triggered XSS Payload (found DOM Object): " + v["param"] + "=" + v["payload"],
-												StatusCode: resp.StatusCode,}
+												StatusCode: resp.StatusCode,
+												ResponseHeaders: simplifyHeaders(resp.Header),}
 											poc.Data = MakePoC(poc.Data, k, options)
 											if options.OutputRequest {
 												reqDump, err := httputil.DumpRequestOut(k, true)
@@ -979,7 +997,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 												PoCType:    options.PoCType,
 												MessageID:  har.MessageIDFromRequest(k),
 												MessageStr: "Reflected Payload in Attribute: " + v["param"] + "=" + v["payload"],
-												StatusCode: resp.StatusCode,}
+												StatusCode: resp.StatusCode,
+												ResponseHeaders: simplifyHeaders(resp.Header),}
 											poc.Data = MakePoC(poc.Data, k, options)
 											if options.OutputRequest {
 												reqDump, err := httputil.DumpRequestOut(k, true)
@@ -1031,7 +1050,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 												PoCType:    options.PoCType,
 												MessageID:  har.MessageIDFromRequest(k),
 												MessageStr: "Triggered XSS Payload (found DOM Object): " + v["param"] + "=" + v["payload"],
-												StatusCode: resp.StatusCode,}
+												StatusCode: resp.StatusCode,
+												ResponseHeaders: simplifyHeaders(resp.Header),}
 											poc.Data = MakePoC(poc.Data, k, options)
 											if options.OutputRequest {
 												reqDump, err := httputil.DumpRequestOut(k, true)
@@ -1082,7 +1102,8 @@ func Scan(target string, options model.Options, sid string) (model.Result, error
 												PoCType:    options.PoCType,
 												MessageID:  har.MessageIDFromRequest(k),
 												MessageStr: "Reflected Payload in HTML: " + v["param"] + "=" + v["payload"],
-												StatusCode: resp.StatusCode,}
+												StatusCode: resp.StatusCode,
+												ResponseHeaders: simplifyHeaders(resp.Header),}
 											poc.Data = MakePoC(poc.Data, k, options)
 											if options.OutputRequest {
 												reqDump, err := httputil.DumpRequestOut(k, true)

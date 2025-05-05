@@ -21,6 +21,7 @@ type PoC struct {
 	RawHTTPRequest  string `json:"raw_request,omitempty"`
 	RawHTTPResponse string `json:"raw_response,omitempty"`
 	StatusCode      int    `json:"status_code"`
+	ResponseHeaders map[string]string `json:"response_headers,omitempty"`
 }
 
 // Result is struct for library and cli application
