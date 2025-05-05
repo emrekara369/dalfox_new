@@ -20,6 +20,7 @@ type PoC struct {
 	MessageStr      string `json:"message_str,omitempty"`
 	RawHTTPRequest  string `json:"raw_request,omitempty"`
 	RawHTTPResponse string `json:"raw_response,omitempty"`
+	StatusCode      int    `json:"status_code"`
 }
 
 // Result is struct for library and cli application
